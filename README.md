@@ -13,3 +13,8 @@
 3. La base de datos esta en la nube en el archivo de configuracion: 
 
 - /Cine/src/java/db.properties
+
+4. Usuario admin:
+
+- Username: 0
+- Password: 000
