@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+
+body {
+  background-color: #151515 !important;
+}
+
+.album.py-5.bg-light{
+    background-color: #151515 !important;
+}
+:root {
+    --selected-color: #2ecc71;
+    --occupied-color: #e74c3c;
+    --available-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.theather-container {
+
+    font-family: "Lato", sans-serif;
+    background-color: #242333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px;
+    margin-bottom: 3px;
+}
+
+.seat {
+    background-color: #444451;
+    height: 12px ;
+    width: 15px !important;
+    margin: 3px ;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+
+.seat.selected {
+    background-color: var(--selected-color) ;
+}
+
+.seat.occupied {
+    background-color: var(--available-color) ;
+}
+
+/* Selects the second row f*/
+.seat:nth-of-type(4) {
+    margin-right: 18px ;
+}
+
+
+.seat:not(.occupied) {
+    cursor: pointer ;
+    transform: scale(1) ;
+}
+
+.showcase .seat:not(.occupied) {
+    cursor: default ;
+    transform: scale(1);
+}
+
+.showcase {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 2px;
+}
+
+.row {
+    display: flex;
+}
+
+.screen {
+    background-color: #fff;
+    height: 70px;
+    width: 70%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+    margin: 5px 0;
+}
+
+p.text span {
+    color: #6feaf6;
+}
+
+.paraelnav {
+
+    background-color: #1d2185 !important;
+    color: white !important;
+}
+
+/********     Table styles         */
+
+.table-container{
+    border-radius: 15px;
+    grid-column: 3/11;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+table {
+    border-radius: 15px;
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+
+}
+
+tr th{
+    text-align: center;
+    font-size: 26px;
+    color: black;
+    user-select: none;
+
+}
+
+
+.round-button 
+{
+    width:20px;
+    display: table-cell;
+}
+
+.lblname{
+    display: table-cell;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+
+
+
+/*******  Informacion curso*/
+
+.curso-container{
+    grid-column: 4/9;
+    justify-self: center;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.tabla-info-cursos{
+    padding: 50px;
+    justify-self: center;
+}
+
+td{
+    padding: 25px;
+}
+
+.curso-izquierda{
+    text-align: end;
+}
+
+.curso-derecha{
+    text-align: start;
+}
+
+.curso-centro{
+    text-align: center;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    /*object-fit: cover;*/
+}
+
+/*
+.btn.btn-danger.movie-action{
+    width: 60px;
+    height: 25px;
+    font-size: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.btn.btn-success.movie-action{
+    width: 60px;
+    height: 25px;
+    font-size: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+*/
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.btn-outline-secondary:hover{
+    background-color: #3C415C !important;
+}
+
+.navbar-custom { 
+    background-color: #301B3F !important; 
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.modal-header{
+    background-color: #301B3F !important; 
+    color: white !important;
+}
+
+input[type=text], input[type=password], input[type=number], input[type=search], input[type=date], input[type=time], select, option{
+    height: 35px !important;
+    border-radius: 5px;
+    border-style:solid;
+    border:none;
+    border-width:1px;
+    border:1px solid #cccccc;
+}
