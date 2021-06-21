@@ -38,6 +38,8 @@ function register() {
                 break;
             case 'CLIENTE':
                 showClientOptions();
+                $("#modalButacas").modal("hide");
+                $("#modalHorarios").modal("hide");
                 console.log("LOGIN REGISTER CLIENTE"); //document.location = url+"about.html"; 
                 break;
         }
