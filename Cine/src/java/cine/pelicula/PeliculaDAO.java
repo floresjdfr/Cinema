@@ -77,6 +77,7 @@ public class PeliculaDAO {
         stm.setString(2, p.getDuracion());
         stm.setString(3, p.getDescripcion());
         stm.setString(4, p.getPrecio());
+        stm.setInt(5, 1);
 
         int count = Database.instance().executeUpdate(stm);
         if (count == 0) {

@@ -47,11 +47,9 @@ function Pelicula() {
         $('#modalPelicula').modal('hide');
         addImagen();
         resetPelicula();
+        fetchAndListMoviesAdmin();
 
     })();
-    setTimeout(() => {
-        fetchAndListMoviesAdmin()();
-    }, 400);
 
 }
 
@@ -253,6 +251,7 @@ function Sala() {
 
 
         resetSala();
+        fetchAndListSalas();
     })();
 }
 

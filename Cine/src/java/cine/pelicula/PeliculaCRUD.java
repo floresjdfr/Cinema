@@ -12,8 +12,9 @@ public class PeliculaCRUD {
             + "ORDER BY id_Pelicula";
 
     protected static final String CMD_AGREGAR
-            = "INSERT INTO Pelicula (Nombre, duracion, descripcion, precio) "
-            + "VALUES (?, ?, ?, ?); ";
+            = "INSERT INTO Pelicula (Nombre, duracion, descripcion, precio, estado) "
+            + "VALUES (?, ?, ?, ?, ?); ";
+
 
     protected static final String CMD_RECUPERAR
             = "SELECT id_Pelicula, Nombre, duracion, descripcion, precio, estado FROM Pelicula "
