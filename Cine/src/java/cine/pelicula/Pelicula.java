@@ -9,7 +9,6 @@ public class Pelicula {
     String duracion;
     String precio;
     String estado;
-    //final Part image;
 
     public Pelicula() {
     }

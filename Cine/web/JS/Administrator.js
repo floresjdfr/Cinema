@@ -330,22 +330,6 @@ function resetSalas() { //Esta funcion solo se utiliza para volver a poner el ar
     salas = [];
 }
 
-//function fetchMovies() {
-//    resetPeliculas();
-//    let request = new Request(url + 'api/cartelera/peliculas', {method: 'GET', headers: {}});
-//    (async () => {
-//        const response = await fetch(request);
-//        if (!response.ok) {
-//            errorMessage(response.status, $("#buscarDiv #errorDiv"));
-//            return;
-//        }
-//        peliculas = await response.json();
-//        setTimeout(() => {
-//            loadCarteleraForm();
-//        }, 400);
-//    })();
-//}
-
 function resetPeliculas() { //Esta funcion solo se utiliza para volver a poner el array donde se guardan los asientos 
     peliculas = [];
 }
@@ -388,14 +372,6 @@ function leerTickets() {
         var f = item.fecha;
         var h = item.hora;
         var as = item.asiento;
-//        var tr = $("<tr><td>Ticket Numero: "+id+" </td></tr>");
-//        var tr1 = $("<tr><td>Cliente: "+n+" "+a+" </td></tr>");
-//        var tr2 = $("<tr><td>Sala: "+s+" </td></tr>");
-//        var tr3 = $("<tr><td>Pelicula "+p+" </td></tr>");
-//        var tr4 = $("<tr><td>Aseinto "+as+" </td></tr>");
-//        var tr5 = $("<tr><td>Fecha de la funcion: "+f+" </td></tr>");
-//        var tr6 = $("<tr><td>Hora de la Funcion "+h+" </td></tr>");
-//        var l2 = $("<tr><td>-----------------------------------------------------</td></tr>");
         var tr = $("<div>Ticket Numero: " + id + " </div>");
         var tr1 = $("<div>Cliente: " + n + " " + a + " </div>");
         var tr2 = $("<div>Sala: " + s + " </div>");
@@ -458,29 +434,12 @@ function errorMessage(status, place) {
 
 
 function load() {
-    //let request = new Request(url+'index.html', {method: 'GET'});
-//        (async ()=>{
-//            const response = await fetch(request);
-//            if (!response.ok) {errorMessage(response.status,$("#loginDialog #errorDiv"));return;}
-//            content = await response.text();
-//            //$('body').append(content); 
-//            $("#pelicula").click(Pelicula);
-//            $("#sala").click(sala);
-//            $("#cartelera").click(cartelera);
-//            console.log("LOAD ADMINISTRADOR");
-//        })();
-    //$("#peliculaRegister").click(loadImage);
-    //$("#peliculaRegister").click(addImagen);
     $("#peliculaRegister").click(Pelicula);
     $("#salaRegister").click(Sala);
     $("#cartRegister").click(Cartelera);
     $("#ticketCliente").click(buscaTicket);
     $("#nav-dropdown-cartelera-btn").click(loadCarteleraForm);
     $("#nav-dropdown-tickets-btn").click(mostarH);
-
-//     $('#modalTickets').find("#ticketCliente").on("click", () => {
-//                buscaTicket();
-//            });
 }
 
 $(load);

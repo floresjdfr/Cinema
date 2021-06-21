@@ -2,14 +2,10 @@ package controller;
 
 import cine.cartelera.Cartelera;
 import cine.cartelera.JSON_TO_CARTELERA_PARSER;
-import cine.cliente.Cliente;
-import cine.cliente.JSON_TO_CLIENTE_PARSER;
-import cine.pelicula.Image;
 import cine.pelicula.JSON_TO_PELICULA_PARSER;
 import cine.pelicula.Pelicula;
 import cine.sala.JSON_TO_SALA_PARSER;
 import cine.sala.Sala;
-import cine.ticket.Ticket;
 import cine.ticket.TicketListado;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,23 +18,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.security.DenyAll;
 import javax.ws.rs.NotAcceptableException;
-import javax.annotation.security.PermitAll;
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
-import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import logic.Service;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.ResponseBuilder;
 
 @Path("admin")
 @DenyAll
@@ -95,7 +85,6 @@ public class Administrador {
                 while ((read = imageStream.read(bytes)) != -1){out.write(bytes, 0, read);}
                 out.flush();
                 out.close();
-            //Service.instance().insertarImagen("2", imageStream);
         } catch (Exception ex) {
             throw new NotAcceptableException();
         }

@@ -4,7 +4,6 @@ var url = "http://localhost:8080/Cine/";
 
 function register() {
     console.log("REGISTER");
-    //if (!loginValidar()) return;
     cliente = {
         nombre: $("#nombre").val(),
         apellidos: $("#apellidos").val(),
@@ -136,7 +135,6 @@ function load() {
      
         $("#register").click(register);
         $("#nav-compras-btn").click(fetchTUsuarios);
-        //$("#logout").click(logout);
         console.log("LOAD CLIENTE");
 } 
 

@@ -1,7 +1,5 @@
 package cine.cliente;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class ModelCli {
 

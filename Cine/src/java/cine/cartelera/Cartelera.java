@@ -1,12 +1,6 @@
 
 package cine.cartelera;
 
-import cine.pelicula.Pelicula;
-import cine.sala.Sala;
-
-
-
-
 public class Cartelera {
     String id;
     String fecha_funcion;

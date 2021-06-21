@@ -1,7 +1,5 @@
 package cine.ticket;
 
-import cine.cartelera.Cartelera;
-import cine.cliente.Cliente;
 
 public class Ticket {
 

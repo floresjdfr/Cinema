@@ -22,7 +22,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import logic.Service;
@@ -66,6 +65,14 @@ public class User {
         }
         request.getSession(true).setAttribute("Usuario", logged);
         return logged;
+    }
+    
+    @GET 
+    @Path("check-user")
+    @Produces({MediaType.APPLICATION_JSON})
+    @PermitAll
+    public Usuario checkUser() {
+        return (Usuario) request.getSession(true).getAttribute("Usuario"); 
     }
 
     @POST
@@ -169,73 +176,4 @@ public class User {
             throw new NotAcceptableException();
         }
     }
-    
-    
-    
-
-//    @GET
-//    @Path("login")
-//    @Produces({MediaType.APPLICATION_JSON})
-//    public Usuario login(@DefaultValue("") seatsArray String id, @QueryParam("password") String password) { 
-//        Usuario usuario = new Usuario("01","hoysecome");
-//        System.out.print("hoy no se come perros");
-//        return usuario;
-//    }
-    //    @POST
-//    @Consumes(MediaType.MULTIPART_FORM_DATA) 
-//    @Path("{cedula}/imagen")
-//    public void addImage(@PathParam("cedula") String cedula, @FormDataParam("imagen") InputStream imagenStream) {  
-//        try{
-//                int read = 0;
-//                byte[] bytes = new byte[1024];
-//
-//                OutputStream out = new FileOutputStream(new File(location + cedula));
-//                while ((read = imagenStream.read(bytes)) != -1){out.write(bytes, 0, read);}
-//                out.flush();
-//                out.close();
-//            } catch (Exception ex) {
-//                throw new NotAcceptableException(); 
-//            }
-//    }
-    //    @GET
-//    @Path("{cedula}")
-//    @Produces({MediaType.APPLICATION_JSON})
-//    public Usuario get(@PathParam("cedula") String cedula) {
-//        try {
-//            return Service.instance().personaEdit(cedula);
-//        } catch (Exception ex) {
-//            throw new NotFoundException(); 
-//        }
-//    }
-//    @GET
-//    @Path("{cedula}/imagen")
-//    @Produces("image/png")
-//    public Response getImge(@PathParam("cedula") String cedula) throws IOException {
-//        File file = new File(location+cedula);
-//        ResponseBuilder response = Response.ok((Object) file);
-//        return response.build();
-//    }  
-//    @GET
-//    @Produces({MediaType.APPLICATION_JSON})
-//    @Path("mujeres")
-//    public List<Usuario> searchMujeres() { 
-//        List<Usuario> todos = Service.instance().usuarioListAll("");
-//        List<Usuario> mujeres = new ArrayList<>();
-//        for(Usuario p: todos){ if(p.getSexo().equals("F")) mujeres.add(p);};
-//        return mujeres;
-//    }  
-//    @POST
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    @Produces({MediaType.APPLICATION_JSON})  
-//    @Path("filtrar")    
-//    public List<Usuario> filtrar(Usuario filtro) {  
-//        List<Usuario> todos=Service.instance().personaSearch("");
-//        List<Usuario> filtrados = new ArrayList<>();
-//        for(Usuario p: todos){ 
-//            if (    p.getCedula().contains(filtro.getCedula())
-//                  && p.getNombre().contains(filtro.getNombre())
-//                  && p.getSexo().contains(filtro.getSexo()))  filtrados.add(p);
-//        };
-//        return filtrados;
-//    }    
 }
