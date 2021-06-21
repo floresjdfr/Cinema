@@ -19,7 +19,7 @@
 - Username: 0
 - Password: 000
 
-5. El codigo SQL en caso de quere crear la base de datos es e siguiente:
+5. El codigo SQL en caso de quere crear la base de datos es el siguiente:
 
 ```sql
 CREATE TABLE `Administrador` (
